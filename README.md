@@ -38,92 +38,63 @@
 Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+### Выполнить на jupiter функцию, которая выводит hello world
 Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+- Зайти через anaconda в jupiter и записать туда выводт в консоль текста hello world
 
-```py
+![jupiter hello](https://user-images.githubusercontent.com/94524541/193393633-8fa93f8c-a960-4498-8f06-c52192d95006.png)
 
-In [ ]:
-#Import the required modules, numpy for calculation, and Matplotlib for drawing
-import numpy as np
-import matplotlib.pyplot as plt
-#This code is for jupyter Notebook only
-%matplotlib inline
-
-# define data, and change list to array
-x = [3,21,22,34,54,34,55,67,89,99]
-x = np.array(x)
-y = [2,22,24,65,79,82,55,130,150,199]
-y = np.array(y)
-
-#Show the effect of a scatter plot
-plt.scatter(x,y)
-
-```
-
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
 
 
 ## Задание 2
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+### Выполнить на unity фрагмент кода, который будет выводить в консоль hello world
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+- Создать на в unityHub проект
+- Зайти в редактор кода и в функции start записать вывод в консоль текст
 
-```py
+![cod unity](https://user-images.githubusercontent.com/94524541/193394230-b0783de4-88bd-47bd-9c74-8452e4fa3295.png)
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+- Соединить скрипт с одним из объектов
 
-```
+![unity](https://user-images.githubusercontent.com/94524541/193394250-5a8fead2-0497-4956-ac9c-69e56a2107f7.png)
+
+
 
 ## Задание 3
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
+### Разобраться с кодом, что выполняется в этом коде, что происходит
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+- Записываем начальные данные, инициализируем переменные, с которыми будем работать
+![image](https://user-images.githubusercontent.com/94524541/193397948-ca0366df-0a46-428a-ab48-2f8082357936.png)
 
-```py
+- Определяем пул функций
+![image](https://user-images.githubusercontent.com/94524541/193398002-b66d0852-6288-4371-b513-5abcbd21cac8.png)
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+- Начать итерацию
+![image](https://user-images.githubusercontent.com/94524541/193400481-19ec9674-3666-4264-8ff9-b86f9f107df0.png)
+- При единичной итерации линия направлена в сторону точек, но она не поднимается на их уровень, так как была проведена всего одна итерация
 
-```
+- Увеличиваем итерации
+- Итерируем 2 раза
+![image](https://user-images.githubusercontent.com/94524541/193400499-ee564efd-fb15-413f-908b-5bfebe03dc02.png)
+
+- Итерация 3 раза
+![image](https://user-images.githubusercontent.com/94524541/193400536-067497e8-05d7-4cde-a74d-ccb9b48949ba.png)
+
+- Итерация 4 раза
+![image](https://user-images.githubusercontent.com/94524541/193400553-a481ca71-2b8b-4cba-b899-e6bd0e2ad4db.png)
+
+- Итерация 5 раз
+![image](https://user-images.githubusercontent.com/94524541/193400568-4672b2ea-3dd2-4c05-88bf-d3adcf8c7bc3.png)
+
+- Итерация 10 000 раз
+![image](https://user-images.githubusercontent.com/94524541/193400594-5a1dc154-10de-4b26-875f-ee91b840e5a0.png)
+
+
+
 
 ## Выводы
 
-Абзац умных слов о том, что было сделано и что было узнано.
+Я выяснил, что с каждым увеличением итераций, линия принимает тенденцию расположения точек. Но еще с при каждом увеличении итерации линия будет подниматься на всё меньшее растояние
 
 | Plugin | README |
 | ------ | ------ |
