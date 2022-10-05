@@ -38,63 +38,47 @@
 Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
 
 ## Задание 1
-### Выполнить на jupiter функцию, которая выводит hello world
+### Связать google sheets, python, unity с помощью google cloud
 Ход работы:
-- Зайти через anaconda в jupiter и записать туда выводт в консоль текста hello world
+- Создать ключ в google cloud
+![image](https://user-images.githubusercontent.com/94524541/194006868-8ab2b2a7-6109-4bb9-926f-aaffa016db98.png)
 
-![jupiter hello](https://user-images.githubusercontent.com/94524541/193393633-8fa93f8c-a960-4498-8f06-c52192d95006.png)
+- Написать код, который подсоединяется к api таблиц и выводит рандомны числа с подсчетом инфляции
+![image](https://user-images.githubusercontent.com/94524541/194007049-301b6a79-e2ff-4bfa-9518-d6a634bb87fe.png)
+
+![image](https://user-images.githubusercontent.com/94524541/194007074-e593f012-2a37-4444-b33d-ef6b243820af.png)
+
+- Теперь необходимо подсоединить таблицу с unity, написав код
+![image](https://user-images.githubusercontent.com/94524541/194007419-e390385a-f99c-4462-882e-b4d0903100eb.png)
+
+- На выходе мы получаем вывод в консоль данные с нужным нам звуком
+![image](https://user-images.githubusercontent.com/94524541/194007566-18551de2-a1a1-4ef6-9f95-c6c08fa1f2ec.png)
 
 
 
 ## Задание 2
-### Выполнить на unity фрагмент кода, который будет выводить в консоль hello world
+### Необходимо связать данные из ленейной регрессии с кодом и вывести loss в таблицу
 
-- Создать на в unityHub проект
-- Зайти в редактор кода и в функции start записать вывод в консоль текст
 
-![cod unity](https://user-images.githubusercontent.com/94524541/193394230-b0783de4-88bd-47bd-9c74-8452e4fa3295.png)
+- Вложить в цикл создание loss и вывести в таблицу
+![image](https://user-images.githubusercontent.com/94524541/194008346-a2dac52d-8955-4708-9b29-3d8d65d27c9f.png)
 
-- Соединить скрипт с одним из объектов
-
-![unity](https://user-images.githubusercontent.com/94524541/193394250-5a8fead2-0497-4956-ac9c-69e56a2107f7.png)
-
+![image](https://user-images.githubusercontent.com/94524541/194008367-d27053af-fba4-489c-bd67-fdfe92b08658.png)
 
 
 ## Задание 3
-### Разобраться с кодом, что выполняется в этом коде, что происходит
+### Подсоединить данные из loss с unity
 
-- Записываем начальные данные, инициализируем переменные, с которыми будем работать
-![image](https://user-images.githubusercontent.com/94524541/193397948-ca0366df-0a46-428a-ab48-2f8082357936.png)
+- Изменяем диапазон данных в коде, чтобы одни подходили под диапазон loss
+- Изменяем количество колонок
+![image](https://user-images.githubusercontent.com/94524541/194008714-9449d602-db47-4627-b5c6-cb2ddfbd930a.png)
 
-- Определяем пул функций
-![image](https://user-images.githubusercontent.com/94524541/193398002-b66d0852-6288-4371-b513-5abcbd21cac8.png)
-
-- Начать итерацию
-![image](https://user-images.githubusercontent.com/94524541/193400481-19ec9674-3666-4264-8ff9-b86f9f107df0.png)
-- При единичной итерации линия направлена в сторону точек, но она не поднимается на их уровень, так как была проведена всего одна итерация
-
-- Увеличиваем итерации
-- Итерируем 2 раза
-![image](https://user-images.githubusercontent.com/94524541/193400499-ee564efd-fb15-413f-908b-5bfebe03dc02.png)
-
-- Итерация 3 раза
-![image](https://user-images.githubusercontent.com/94524541/193400536-067497e8-05d7-4cde-a74d-ccb9b48949ba.png)
-
-- Итерация 4 раза
-![image](https://user-images.githubusercontent.com/94524541/193400553-a481ca71-2b8b-4cba-b899-e6bd0e2ad4db.png)
-
-- Итерация 5 раз
-![image](https://user-images.githubusercontent.com/94524541/193400568-4672b2ea-3dd2-4c05-88bf-d3adcf8c7bc3.png)
-
-- Итерация 10 000 раз
-![image](https://user-images.githubusercontent.com/94524541/193400594-5a1dc154-10de-4b26-875f-ee91b840e5a0.png)
-
-
+![image](https://user-images.githubusercontent.com/94524541/194008730-061f730e-0f82-4896-a509-5277e9d4cfc4.png)
 
 
 ## Выводы
 
-Я выяснил, что с каждым увеличением итераций, линия принимает тенденцию расположения точек. Но еще с при каждом увеличении итерации линия будет подниматься на всё меньшее растояние
+Я выяснил, что можно выводить звук в unity в зависимости от диапазона данных. Можно подсоединять гугл таблицу к коду и записывать в них значения. Можно так же эту таблицу можно связать с unity. 
 
 | Plugin | README |
 | ------ | ------ |
